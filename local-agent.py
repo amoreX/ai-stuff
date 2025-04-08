@@ -3,7 +3,7 @@ import subprocess
 import os
 
 MODEL_NAME="llama3.2"
-OLLAMA_URL="http://localhost:11434/api/generate"
+OLLAMA_URL="http://localhost:11434/api/generate"  #to get results
 
 def ask_ollama(prompt):
     response = requests.post(OLLAMA_URL, json={
