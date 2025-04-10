@@ -1,1 +1,1 @@
-[]
+[{"role": "user", "content": " Make me a next JS project called my tiny app using TypeScript and Tailwind in my current directory."}, {"role": "assistant", "content": "cd \"/home/nihal/code/ai\" &&\nnpx create-next-app@latest my-tiny-app --ts --tailwind"}]

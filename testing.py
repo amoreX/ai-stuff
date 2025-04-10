@@ -1,11 +1,16 @@
 import whisper
-import os
 import subprocess
 
 # model = whisper.load_model("base")
 model = whisper.load_model("small")
 
-while True:
+def record_and_transcribe():
+    """
+    Records audio from the microphone and transcribes it using Whisper.
+    
+    Returns:
+        str: The transcribed text.
+    """
     print("🎤 Recording... Press ENTER to stop.")
     
     # Start arecord as a background process
@@ -18,6 +23,10 @@ while True:
 
     print("🧠 Transcribing...")
     result = model.transcribe("voice.wav")
+    return result["text"]
 
-    print("🗣️ You said:", result["text"])
-    print("-" * 40)
+if __name__ == "__main__":
+    while True:
+        text = record_and_transcribe()
+        print("🗣️ You said:", text)
+        print("-" * 40)
