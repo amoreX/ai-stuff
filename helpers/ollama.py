@@ -10,6 +10,6 @@ def ask_ollama(prompt):
         "prompt": prompt,
         "stream": False
     })
-    # print(response)
+    
     result = response.json()
     return result['response']
