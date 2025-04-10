@@ -2,7 +2,7 @@ from helpers.ollama import ask_ollama
 from helpers.shell import run_shell_command
 from prompt_utils import construct_prompt
 from helpers.chat_history import get_chat, save_chat
-from testing import record_and_transcribe  # Import the new function
+from helpers.voice_input import record_and_transcribe  # Updated import
 import os
 
 def main():
