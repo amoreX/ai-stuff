@@ -1,4 +1,4 @@
-def construct_prompt(cwd, user_instruction,chat_history):
+def construct_prompt(cwd, user_instruction, chat_history):
     """
     Constructs the system prompt for the AI assistant.
     
@@ -24,7 +24,8 @@ def construct_prompt(cwd, user_instruction,chat_history):
                 Below is the previous chat history. Use it to understand what has already been done:
                 {history_str}
                 ONLY respond with valid shell commands to accomplish this task given by the user.
+                If the user asks casual or conversational questions (e.g., "What's up?", "How are you?"), respond appropriately with normal text.
                 '{user_instruction}'
-                DO NOT include explanations, comments, may reply with text outside of commands only if task asked by user involves no commands , else ony reply with commands
+                DO NOT include explanations, comments, or unrelated text unless explicitly asked by the user.
     """
-    return messages
+    return messages.strip()
